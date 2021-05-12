@@ -2,7 +2,7 @@
   <div id="app">
     <smile-button type="primary" @click="visible= true">点击</smile-button>
     <smile-dialog v-model="visible" />
-    <smile-input v-model="value"></smile-input>
+    <smile-switch v-model="value"></smile-switch>
   </div>
 </template>
 <script>
@@ -12,7 +12,7 @@ export default {
   },
   data () {
     return {
-      value: '1',
+      value: true,
       visible: false
     }
   },
