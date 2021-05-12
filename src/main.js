@@ -6,9 +6,11 @@ import '../packages/smile-css/src/index.scss'
 
 import smileButton from '../packages/button/index.vue'
 import smileDialog from '../packages/dialog/index.vue'
+import smileInput from '../packages/input/index.vue'
 Vue.config.productionTip = false
-Vue.component('smileButton', smileButton)
-Vue.component('smileDialog', smileDialog)
+Vue.component(smileButton.name, smileButton)
+Vue.component(smileDialog.name, smileDialog)
+Vue.component(smileInput.name, smileInput)
 
 // Vue.use('smileButton', smileButton)
 // Vue.use('smileDialog', smileDialog)

@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <smile-button type="primary" @click="visible= true">点击</smile-button>
-    <smileDialog v-model="visible" />
+    <smile-dialog v-model="visible" />
+    <smile-input v-model="value"></smile-input>
   </div>
 </template>
 <script>

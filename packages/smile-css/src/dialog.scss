@@ -18,7 +18,7 @@
   box-shadow: 0 1px 3px rgb(0 0 0 / 30%);
   box-sizing: border-box;
   z-index: 2008;
-  color: $color-8;
+  color: $color-08;
 
   .smile-dialog__header {
     display: flex;
@@ -28,11 +28,11 @@
 
     .smile-dialog__title {
       font-size: 18px;
-      color: $color-8
+      color: $color-08
     }
 
     .smile-dialog__close {
-      color: $color-6;
+      color: $color-06;
       cursor: pointer;
     }
   }
