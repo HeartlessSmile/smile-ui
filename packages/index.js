@@ -2,7 +2,6 @@ import Button from './button/index.vue'
 
 const components = [Button]
 const install = function (vue) {
-  // console.log('123')
   components.forEach(item => {
     vue.component(item.name, item)
   })
