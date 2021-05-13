@@ -3,7 +3,7 @@
     <span class="smile-switch__core" :style="{width,}" @click="handleClick" ref="core">
       <span class="smile-switch__inner"></span>
     </span>
-    <input type="checkbox" class="smile-switch__input" :checked="checked" :name="name">
+    <input type="checkbox" class="smile-switch__input" ref="input" :name="name">
   </div>
 
 </template>
@@ -12,12 +12,11 @@ export default {
   name: 'smile-switch',
   data: function () {
     return {
-      checked: false
     }
   },
   model: {
     prop: 'value',
-    event: 'change'
+    event: 'input'
   },
   props: {
     value: {
@@ -54,8 +53,12 @@ export default {
       if (this.disabled) {
         return false
       }
-      this.checked = !this.checked
-      this.$emit('change', this.checked ? this.activeValue : this.inactiveValue)
+      const val = this.checked ? this.inactiveValue : this.activeValue
+      this.$emit('change', val)
+      this.$emit('input', val)
+      this.$nextTick(() => {
+        this.$refs.input.checked = this.checked
+      })
       this.setColor()
     },
     handelInput (e) {
@@ -67,18 +70,22 @@ export default {
         this.$refs.core.style.backgroundColor = color
         this.$refs.core.style.borderColor = color
       }
-    },
-    initChecked () {
-      if (this.value === this.activeValue) {
-        this.checked = true
-      } else {
-        this.checked = false
-      }
+    }
+  },
+  computed: {
+    checked () {
+      return this.value === this.activeValue
+    }
+  },
+  watch: {
+    checked () {
+      this.$refs.input.checked = this.checked
+      this.setColor()
     }
   },
   mounted () {
-    this.initChecked()
     this.setColor()
+    this.$refs.input.checked = this.checked
   }
 }
 </script>
