@@ -4,18 +4,19 @@ import App from './App.vue'
 import '../packages/smile-css/src/index.scss'
 // Vue.use(smileUi)
 
-import smileButton from '../packages/button/index.vue'
-import smileDialog from '../packages/dialog/index.vue'
-import smileInput from '../packages/input/index.vue'
-import smileSwitch from '../packages/switch/index.vue'
+import Input from '../packages/input/index'
+import Switch from '../packages/switch/index'
+import Radio from '../packages/radio/index'
+import Button from '../packages/button/index'
+import Dialog from '../packages/dialog/index.js'
 Vue.config.productionTip = false
-Vue.component(smileButton.name, smileButton)
-Vue.component(smileDialog.name, smileDialog)
-Vue.component(smileInput.name, smileInput)
-Vue.component(smileSwitch.name, smileSwitch)
-
-// Vue.use('smileButton', smileButton)
-// Vue.use('smileDialog', smileDialog)
+// Vue.component(smileInput.name, smileInput)
+// Vue.component(smileSwitch.name, smileSwitch)
+Vue.use(Radio)
+Vue.use(Button)
+Vue.use(Dialog)
+Vue.use(Input)
+Vue.use(Switch)
 new Vue({
   render: h => h(App)
 }).$mount('#app')

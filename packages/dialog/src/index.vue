@@ -17,6 +17,7 @@
         <slot name="footer">
           <span @click="handleClose" class="smile-dialog__footer__close">取消</span>
           <smile-button @click="handleSure" type="primary" class="smile-dialog__footer__sure">确认</smile-button>
+
         </slot>
       </div>
     </div>

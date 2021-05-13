@@ -3,6 +3,8 @@
     <smile-button type="primary" @click="visible= true">点击</smile-button>
     <smile-dialog v-model="visible" />
     <smile-switch v-model="value"></smile-switch>
+    <smile-input />
+    <smile-radio></smile-radio>
   </div>
 </template>
 <script>
