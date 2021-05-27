@@ -7,6 +7,7 @@
 <script>
 export default {
   name: 'smile-input',
+  componentName: 'smile-input',
   props: {
     placeholder: {
       type: String,

@@ -10,6 +10,7 @@
 <script>
 export default {
   name: 'smile-tabs',
+  componentName: 'smile-tabs',
   data () {
     return {
       childList: [] // 将初始化tab赋值给activeKey

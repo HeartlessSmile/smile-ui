@@ -14,6 +14,7 @@
 <script>
 export default {
   name: 'smile-button',
+  componentName: 'smile-button',
   props: {
     type: {
       validator (v) {

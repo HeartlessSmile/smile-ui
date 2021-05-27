@@ -10,6 +10,7 @@
 <script>
 export default {
   name: 'smile-switch',
+  componentName: 'smile-switch',
   data: function () {
     return {
     }

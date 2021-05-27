@@ -27,6 +27,7 @@
 <script>
 export default {
   name: 'smile-dialog',
+  componentName: 'smile-dialog',
   props: {
     visible: {
       type: Boolean,

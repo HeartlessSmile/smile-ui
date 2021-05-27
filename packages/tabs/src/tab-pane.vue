@@ -6,6 +6,7 @@
 <script>
 export default {
   name: 'smile-pane',
+  componentName: 'smile-pane',
   data () {
     return {
       show: false // 初始时将所有内容隐藏

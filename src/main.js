@@ -9,6 +9,7 @@ import Switch from '../packages/switch/index'
 import Radio from '../packages/radio/index'
 import Button from '../packages/button/index'
 import Dialog from '../packages/dialog/index.js'
+import RadioGroup from '../packages/radio-group/index.js'
 Vue.config.productionTip = false
 // Vue.component(smileInput.name, smileInput)
 // Vue.component(smileSwitch.name, smileSwitch)
@@ -17,6 +18,7 @@ Vue.use(Button)
 Vue.use(Dialog)
 Vue.use(Input)
 Vue.use(Switch)
+Vue.use(RadioGroup)
 new Vue({
   render: h => h(App)
 }).$mount('#app')
